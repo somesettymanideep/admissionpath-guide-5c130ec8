@@ -158,6 +158,42 @@ const Index = () => (
       </div>
     </section>
 
+    {/* Testimonials */}
+    <section className="py-16 lg:py-24">
+      <div className="container">
+        <div className="mx-auto mb-12 max-w-2xl text-center">
+          <h2 className="mb-4 text-3xl font-extrabold text-foreground lg:text-4xl">
+            What Our <span className="text-gradient">Students Say</span>
+          </h2>
+          <p className="text-muted-foreground">
+            Thousands of students have achieved their dream admissions with our guidance.
+          </p>
+        </div>
+        <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
+          {testimonials.map((t) => (
+            <div key={t.name} className="relative rounded-xl border border-border bg-card p-6 card-elevated">
+              <Quote className="absolute right-4 top-4 h-8 w-8 text-primary/10" />
+              <div className="mb-4 flex gap-0.5">
+                {Array.from({ length: 5 }).map((_, i) => (
+                  <Star key={i} className={`h-4 w-4 ${i < t.rating ? "fill-yellow-400 text-yellow-400" : "text-muted-foreground/30"}`} />
+                ))}
+              </div>
+              <p className="mb-5 text-sm text-muted-foreground leading-relaxed">"{t.text}"</p>
+              <div className="flex items-center gap-3">
+                <Avatar className="h-10 w-10">
+                  <AvatarFallback className="bg-primary/10 text-sm font-semibold text-primary">{t.initials}</AvatarFallback>
+                </Avatar>
+                <div>
+                  <div className="text-sm font-semibold text-foreground">{t.name}</div>
+                  <div className="text-xs text-muted-foreground">{t.course}</div>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
     {/* CTA */}
     <section className="py-16 lg:py-24">
       <div className="container">
