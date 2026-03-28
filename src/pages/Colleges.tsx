@@ -87,7 +87,7 @@ const Colleges = () => {
                   <p className="text-xs text-muted-foreground">Cutoff: {college.cutoff}</p>
                 </div>
               </div>
-            </div>
+            </Link>
           ))}
         </div>
 
