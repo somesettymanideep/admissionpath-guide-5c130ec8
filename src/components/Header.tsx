@@ -10,6 +10,7 @@ const navLinks = [
   { label: "Predictor", to: "/predictor" },
   { label: "Courses", to: "/courses" },
   { label: "News", to: "/news" },
+  { label: "Community", to: "/community" },
 ];
 
 const Header = () => {
