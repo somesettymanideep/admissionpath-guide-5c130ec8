@@ -15,9 +15,9 @@ const services = [
 ];
 
 const stats = [
-  { value: "50,000+", label: "Students Counseled" },
-  { value: "500+", label: "Partner Colleges" },
-  { value: "95%", label: "Admission Success" },
+  { value: "10,000+", label: "Students Guided" },
+  { value: "100+", label: "Colleges Listed" },
+  { value: "10+", label: "Years Experience" },
   { value: "24/7", label: "Support Available" },
 ];
 
