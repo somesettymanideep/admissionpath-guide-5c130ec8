@@ -7,12 +7,7 @@ import { toast } from "sonner";
 
 const courses = [
   "B.Tech / Engineering",
-  "MBBS / Medical",
-  "BBA / MBA",
-  "Law / LLB",
-  "B.Sc / M.Sc",
-  "B.Com / M.Com",
-  "B.Pharmacy",
+  "M.Tech / Postgraduate Engineering",
   "Other",
 ];
 

@@ -19,7 +19,7 @@ const Admissions = () => (
             Direct Admission Support for Top Private Colleges
           </h1>
           <p className="mb-6 text-lg text-primary-foreground/80">
-            Expert guidance for Management Quota & Direct Admissions in Engineering, Medical, MBA, Law, and more across India.
+            Expert guidance for Management Quota & Direct Admissions in B.Tech and M.Tech Engineering programs across India.
           </p>
           <a href="#inquiry-form">
             <Button size="lg" variant="secondary">
@@ -57,13 +57,12 @@ const Admissions = () => (
             <h2 className="mb-6 text-3xl font-extrabold text-foreground">Our Admission Services</h2>
             <ul className="space-y-4">
               {[
-                "Direct admission in private engineering colleges (B.Tech, M.Tech)",
-                "MBBS/BDS admission guidance in private medical colleges",
-                "MBA admission in top B-schools without entrance exams",
-                "Law (LLB/BA-LLB) admission support",
-                "Management quota seat assistance",
-                "NRI quota & international admissions",
-                "Lateral entry admissions",
+                "Direct admission in private engineering colleges (B.Tech)",
+                "M.Tech admission guidance in top universities",
+                "Management quota seat assistance for engineering",
+                "NRI quota & international engineering admissions",
+                "Lateral entry B.Tech admissions",
+                "GATE counseling and M.Tech seat allocation support",
                 "Complete documentation and application handling",
               ].map((s) => (
                 <li key={s} className="flex items-start gap-3">

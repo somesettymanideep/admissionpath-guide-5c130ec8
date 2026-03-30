@@ -1,68 +1,32 @@
-import { BookOpen, ArrowRight, Briefcase, Stethoscope, Scale, BarChart3, FlaskConical, Palette } from "lucide-react";
+import { BookOpen, ArrowRight, Briefcase } from "lucide-react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 
 const streams = [
   {
     icon: Briefcase,
-    title: "Engineering (B.Tech)",
+    title: "B.Tech (Undergraduate Engineering)",
     after: "After 12th (PCM)",
     careers: ["Software Engineer", "Data Scientist", "Civil Engineer", "Mechanical Engineer"],
     avgSalary: "₹4-12 LPA",
-    topExams: "JEE Main, VITEEE, BITSAT",
+    topExams: "JEE Main, VITEEE, BITSAT, SRMJEEE",
     color: "text-primary",
   },
   {
-    icon: Stethoscope,
-    title: "Medical (MBBS/BDS)",
-    after: "After 12th (PCB)",
-    careers: ["Doctor", "Surgeon", "Dentist", "Researcher"],
-    avgSalary: "₹6-20 LPA",
-    topExams: "NEET UG",
-    color: "text-secondary",
-  },
-  {
-    icon: BarChart3,
-    title: "Management (BBA/MBA)",
-    after: "After 12th / Graduation",
-    careers: ["Business Analyst", "Marketing Manager", "HR Manager", "Consultant"],
-    avgSalary: "₹5-25 LPA",
-    topExams: "CAT, MAT, XAT",
-    color: "text-primary",
-  },
-  {
-    icon: Scale,
-    title: "Law (BA-LLB / LLB)",
-    after: "After 12th / Graduation",
-    careers: ["Advocate", "Corporate Lawyer", "Legal Advisor", "Judge"],
-    avgSalary: "₹4-15 LPA",
-    topExams: "CLAT, LSAT",
-    color: "text-secondary",
-  },
-  {
-    icon: FlaskConical,
-    title: "Science (B.Sc / M.Sc)",
-    after: "After 12th (PCM/PCB)",
-    careers: ["Research Scientist", "Lab Technician", "Data Analyst", "Professor"],
-    avgSalary: "₹3-10 LPA",
-    topExams: "CUET, University exams",
-    color: "text-primary",
-  },
-  {
-    icon: Palette,
-    title: "Design & Arts",
-    after: "After 10th / 12th",
-    careers: ["UI/UX Designer", "Graphic Designer", "Animator", "Fashion Designer"],
-    avgSalary: "₹3-12 LPA",
-    topExams: "NID, NIFT, UCEED",
+    icon: Briefcase,
+    title: "M.Tech (Postgraduate Engineering)",
+    after: "After B.Tech / B.E.",
+    careers: ["Senior Engineer", "Research Scientist", "Technical Lead", "Professor"],
+    avgSalary: "₹8-20 LPA",
+    topExams: "GATE, University Entrance",
     color: "text-secondary",
   },
 ];
 
 const pathways = [
-  { stage: "After 10th", options: ["Science (PCM/PCB)", "Commerce", "Arts/Humanities", "Diploma (Polytechnic)", "ITI / Vocational"] },
-  { stage: "After 12th", options: ["B.Tech / B.E.", "MBBS / BDS", "BBA / B.Com", "BA / B.Sc", "Law (BA-LLB)", "Design / Architecture"] },
-  { stage: "After Graduation", options: ["M.Tech / M.Sc", "MBA / PGDM", "LLB / LLM", "Civil Services (UPSC)", "PhD / Research", "Professional Certifications"] },
+  { stage: "After 10th", options: ["Science (PCM)", "Diploma in Engineering (Polytechnic)", "ITI / Vocational"] },
+  { stage: "After 12th (PCM)", options: ["B.Tech / B.E.", "Lateral Entry B.Tech", "Diploma to Degree"] },
+  { stage: "After B.Tech", options: ["M.Tech / M.E.", "GATE Preparation", "PhD / Research", "Professional Certifications"] },
 ];
 
 const Courses = () => (
