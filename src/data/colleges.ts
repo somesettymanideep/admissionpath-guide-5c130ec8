@@ -1,3 +1,6 @@
+import vitVelloreImg from "@/assets/vit-vellore.webp";
+import srmChennaiImg from "@/assets/srm-chennai.jpg";
+
 export interface College {
   id: string;
   name: string;
