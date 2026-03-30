@@ -23,14 +23,13 @@ const stats = [
 
 const testimonials = [
   { name: "Priya Sharma", initials: "PS", course: "B.Tech, VIT Vellore", rating: 5, text: "AdmissionCareerGuide helped me secure admission in VIT when I had almost lost hope. Their counselors were incredibly supportive throughout the process!" },
-  { name: "Rahul Verma", initials: "RV", course: "MBA, Christ University", rating: 5, text: "The college predictor tool was spot-on! I got into my dream college for MBA. The team guided me from application to admission seamlessly." },
-  { name: "Ananya Reddy", initials: "AR", course: "MBBS, Manipal University", rating: 5, text: "I was confused about medical admissions. Their expert counselors explained every option clearly and helped me get a management quota seat at Manipal." },
   { name: "Karthik Nair", initials: "KN", course: "B.Tech, SRM Chennai", rating: 4, text: "Great experience! The team was transparent about fees and process. Got my admission confirmed within 2 weeks. Highly recommend their services." },
-  { name: "Sneha Patel", initials: "SP", course: "BBA, Symbiosis Pune", rating: 5, text: "I didn't know where to start with my BBA applications. The counselors not only shortlisted colleges but also helped me prepare for interviews. Forever grateful!" },
   { name: "Arjun Mehta", initials: "AM", course: "B.Tech, BITS Pilani", rating: 5, text: "The rank predictor was amazingly accurate. I got personalized college suggestions and the team followed up until I got my admission letter. 10/10 service!" },
-  { name: "Divya Krishnan", initials: "DK", course: "MBBS, Kasturba Medical", rating: 4, text: "Navigating NEET counseling was overwhelming. AdmissionCareerGuide simplified everything and helped me understand management quota options clearly." },
-  { name: "Mohammed Faizan", initials: "MF", course: "MBA, NMIMS Mumbai", rating: 5, text: "From mock interviews to final admission, the support was exceptional. I got into NMIMS which I thought was out of reach. Best investment I made!" },
-  { name: "Riya Gupta", initials: "RG", course: "B.Arch, Manipal", rating: 5, text: "As a B.Arch aspirant, finding the right college was tough. Their database and counselor expertise made the entire process smooth and stress-free." },
+  { name: "Sneha Patel", initials: "SP", course: "M.Tech, IIT Bombay", rating: 5, text: "I was unsure about M.Tech options after my B.Tech. The counselors helped me shortlist the best colleges and guided me through GATE counseling seamlessly!" },
+  { name: "Rahul Verma", initials: "RV", course: "B.Tech, Manipal IT", rating: 5, text: "The college predictor tool was spot-on! I got into my dream college for B.Tech. The team guided me from application to admission seamlessly." },
+  { name: "Riya Gupta", initials: "RG", course: "B.Tech, Amity University", rating: 5, text: "Finding the right engineering college was tough. Their database and counselor expertise made the entire process smooth and stress-free." },
+  { name: "Mohammed Faizan", initials: "MF", course: "M.Tech, NIT Trichy", rating: 5, text: "From GATE preparation guidance to final admission, the support was exceptional. Got into NIT which I thought was out of reach. Best investment I made!" },
+  { name: "Divya Krishnan", initials: "DK", course: "B.Tech, BITS Pilani", rating: 4, text: "Navigating engineering admissions was overwhelming. AdmissionCareerGuide simplified everything and helped me understand all my options clearly." },
 ];
 
 const Index = () => (
