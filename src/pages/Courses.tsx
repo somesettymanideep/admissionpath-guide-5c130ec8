@@ -1,4 +1,4 @@
-import { BookOpen, ArrowRight, Briefcase, Stethoscope, Scale, BarChart3, FlaskConical, Palette } from "lucide-react";
+import { BookOpen, ArrowRight, Briefcase } from "lucide-react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 
