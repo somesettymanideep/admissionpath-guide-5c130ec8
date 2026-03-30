@@ -22,14 +22,14 @@ const stats = [
 ];
 
 const testimonials = [
-  { name: "Priya Sharma", initials: "PS", course: "B.Tech, VIT Vellore", rating: 5, text: "AdmissionCareerGuide helped me secure admission in VIT when I had almost lost hope. Their counselors were incredibly supportive throughout the process!" },
-  { name: "Karthik Nair", initials: "KN", course: "B.Tech, SRM Chennai", rating: 4, text: "Great experience! The team was transparent about fees and process. Got my admission confirmed within 2 weeks. Highly recommend their services." },
-  { name: "Arjun Mehta", initials: "AM", course: "B.Tech, BITS Pilani", rating: 5, text: "The rank predictor was amazingly accurate. I got personalized college suggestions and the team followed up until I got my admission letter. 10/10 service!" },
-  { name: "Sneha Patel", initials: "SP", course: "M.Tech, IIT Bombay", rating: 5, text: "I was unsure about M.Tech options after my B.Tech. The counselors helped me shortlist the best colleges and guided me through GATE counseling seamlessly!" },
-  { name: "Rahul Verma", initials: "RV", course: "B.Tech, Manipal IT", rating: 5, text: "The college predictor tool was spot-on! I got into my dream college for B.Tech. The team guided me from application to admission seamlessly." },
-  { name: "Riya Gupta", initials: "RG", course: "B.Tech, Amity University", rating: 5, text: "Finding the right engineering college was tough. Their database and counselor expertise made the entire process smooth and stress-free." },
-  { name: "Mohammed Faizan", initials: "MF", course: "M.Tech, NIT Trichy", rating: 5, text: "From GATE preparation guidance to final admission, the support was exceptional. Got into NIT which I thought was out of reach. Best investment I made!" },
-  { name: "Divya Krishnan", initials: "DK", course: "B.Tech, BITS Pilani", rating: 4, text: "Navigating engineering admissions was overwhelming. AdmissionCareerGuide simplified everything and helped me understand all my options clearly." },
+  { name: "Priya S.", initials: "PS", course: "B.Tech Student", rating: 5, text: "The counselors provided helpful guidance during my college search. They explained the admission process clearly and answered all my questions patiently." },
+  { name: "Karthik N.", initials: "KN", course: "B.Tech Student", rating: 4, text: "Good experience with the counseling team. They were transparent about the process and helped me understand my options for engineering colleges." },
+  { name: "Arjun M.", initials: "AM", course: "B.Tech Student", rating: 5, text: "The college comparison tool was very useful. I received personalized suggestions based on my profile and the team was responsive throughout." },
+  { name: "Sneha P.", initials: "SP", course: "M.Tech Student", rating: 5, text: "I was unsure about M.Tech options after B.Tech. The counselors helped me explore different colleges and understand the GATE counseling process." },
+  { name: "Rahul V.", initials: "RV", course: "B.Tech Student", rating: 5, text: "The college information tool helped me compare different options. The counseling team guided me through the application process step by step." },
+  { name: "Riya G.", initials: "RG", course: "B.Tech Student", rating: 5, text: "Finding the right engineering college was confusing. The counselors helped me narrow down options based on my preferences and budget." },
+  { name: "Mohammed F.", initials: "MF", course: "M.Tech Student", rating: 5, text: "The GATE counseling guidance was very informative. The team helped me understand seat allocation and college selection process clearly." },
+  { name: "Divya K.", initials: "DK", course: "B.Tech Student", rating: 4, text: "Navigating engineering admissions was overwhelming. The counseling service simplified things and helped me understand my options clearly." },
 ];
 
 const Index = () => (
