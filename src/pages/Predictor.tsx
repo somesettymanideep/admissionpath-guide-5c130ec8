@@ -78,7 +78,7 @@ const Predictor = () => {
               </div>
             </div>
             <Button type="submit" className="mt-4 w-full" size="lg">
-              <TrendingUp className="mr-2 h-4 w-4" /> Predict My Colleges
+              <TrendingUp className="mr-2 h-4 w-4" /> Explore Colleges
             </Button>
           </form>
 
