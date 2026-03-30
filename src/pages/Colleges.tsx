@@ -49,7 +49,7 @@ const Colleges = () => {
             <SelectTrigger className="w-[180px]"><SelectValue placeholder="Course" /></SelectTrigger>
             <SelectContent>
               <SelectItem value="all">All Courses</SelectItem>
-              {["B.Tech", "MBBS", "MBA", "Law", "B.Sc", "MCA"].map((c) => <SelectItem key={c} value={c}>{c}</SelectItem>)}
+              {["B.Tech", "M.Tech"].map((c) => <SelectItem key={c} value={c}>{c}</SelectItem>)}
             </SelectContent>
           </Select>
         </div>

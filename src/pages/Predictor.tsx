@@ -13,7 +13,7 @@ interface Prediction {
   fees: string;
 }
 
-const examOptions = ["JEE Main", "NEET UG", "VITEEE", "SRMJEEE", "MET", "COMEDK"];
+const examOptions = ["JEE Main", "VITEEE", "SRMJEEE", "BITSAT", "MET", "COMEDK", "GATE"];
 
 const generatePredictions = (exam: string, rank: number): Prediction[] => {
   const results: Prediction[] = [];

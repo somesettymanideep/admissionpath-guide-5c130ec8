@@ -49,7 +49,7 @@ export const colleges: College[] = [
     placements: "₹7.2 LPA avg | ₹41 LPA highest",
     cutoff: "SRMJEEE 70+ percentile",
     image: srmChennaiImg,
-    overview: "SRM IST is one of India's top-ranked universities offering diverse programs across engineering, medicine, and management.",
+    overview: "SRM IST is one of India's top-ranked universities offering excellent B.Tech and M.Tech programs with strong placement records.",
   },
   {
     id: "3",

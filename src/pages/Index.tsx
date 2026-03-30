@@ -46,7 +46,7 @@ const Index = () => (
               Your Complete Admission & Career Guidance Partner
             </h1>
             <p className="mb-8 max-w-lg text-lg text-primary-foreground/80">
-              Expert counseling, college predictions, and direct admission support for Engineering, Medical, MBA, Law, and more.
+              Expert counseling, college predictions, and direct admission support for B.Tech & M.Tech Engineering programs across India.
             </p>
             <div className="flex flex-wrap gap-3">
               <Button size="lg" variant="secondary" asChild>

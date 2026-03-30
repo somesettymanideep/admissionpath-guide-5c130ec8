@@ -24,9 +24,9 @@ const streams = [
 ];
 
 const pathways = [
-  { stage: "After 10th", options: ["Science (PCM/PCB)", "Commerce", "Arts/Humanities", "Diploma (Polytechnic)", "ITI / Vocational"] },
-  { stage: "After 12th", options: ["B.Tech / B.E.", "MBBS / BDS", "BBA / B.Com", "BA / B.Sc", "Law (BA-LLB)", "Design / Architecture"] },
-  { stage: "After Graduation", options: ["M.Tech / M.Sc", "MBA / PGDM", "LLB / LLM", "Civil Services (UPSC)", "PhD / Research", "Professional Certifications"] },
+  { stage: "After 10th", options: ["Science (PCM)", "Diploma in Engineering (Polytechnic)", "ITI / Vocational"] },
+  { stage: "After 12th (PCM)", options: ["B.Tech / B.E.", "Lateral Entry B.Tech", "Diploma to Degree"] },
+  { stage: "After B.Tech", options: ["M.Tech / M.E.", "GATE Preparation", "PhD / Research", "Professional Certifications"] },
 ];
 
 const Courses = () => (
