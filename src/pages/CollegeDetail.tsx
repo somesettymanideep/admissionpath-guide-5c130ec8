@@ -31,8 +31,8 @@ const reviewsData: Record<string, { name: string; initials: string; rating: numb
     { name: "Prachi Gupta", initials: "PG", rating: 5, date: "Feb 2026", text: "Best college decision I ever made. The culture of self-study and innovation is ingrained in every BITSian." },
   ],
   "6": [
-    { name: "Tanvi Kulkarni", initials: "TK", rating: 4, date: "Jan 2026", text: "Symbiosis Pune has a vibrant campus life. The MBA program is very well-structured with excellent industry exposure." },
-    { name: "Nikhil Desai", initials: "ND", rating: 5, date: "Dec 2025", text: "Great for management and law programs. Pune as a city adds to the overall student experience. Highly recommended." },
+    { name: "Tanvi Kulkarni", initials: "TK", rating: 4, date: "Jan 2026", text: "Symbiosis Pune has a vibrant campus life. The engineering program is well-structured with excellent industry exposure." },
+    { name: "Nikhil Desai", initials: "ND", rating: 5, date: "Dec 2025", text: "Great for engineering programs. Pune as a city adds to the overall student experience. Highly recommended." },
   ],
 };
 
