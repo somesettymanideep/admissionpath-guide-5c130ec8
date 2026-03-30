@@ -3,10 +3,10 @@ import { Button } from "@/components/ui/button";
 import LeadForm from "@/components/LeadForm";
 
 const steps = [
-  { icon: Phone, title: "Free Counseling Call", desc: "Speak with our expert counselor to understand your options." },
-  { icon: ClipboardList, title: "Profile Assessment", desc: "We evaluate your marks, preferences, and budget." },
-  { icon: FileText, title: "College Shortlisting", desc: "Get a curated list of colleges matching your profile." },
-  { icon: CheckCircle, title: "Admission Secured", desc: "We handle the entire application and admission process." },
+  { icon: Phone, title: "Free Counseling Call", desc: "Speak with our counselor to understand your options." },
+  { icon: ClipboardList, title: "Profile Assessment", desc: "We review your marks, preferences, and budget." },
+  { icon: FileText, title: "College Shortlisting", desc: "Receive a list of colleges that may match your profile." },
+  { icon: CheckCircle, title: "Application Support", desc: "We assist you with the application and documentation process." },
 ];
 
 const Admissions = () => (
