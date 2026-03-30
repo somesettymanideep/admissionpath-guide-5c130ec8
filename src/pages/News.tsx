@@ -3,11 +3,11 @@ import { Badge } from "@/components/ui/badge";
 
 const news = [
   { title: "JEE Main 2026 Session 2 Registration Opens", date: "March 25, 2026", category: "JEE", desc: "NTA has opened the registration window for JEE Main April 2026 session. Last date to apply is April 10, 2026." },
-  { title: "NEET UG 2026 Exam Date Announced", date: "March 20, 2026", category: "NEET", desc: "NEET UG 2026 is scheduled for May 4, 2026. Admit cards will be released 15 days before the exam." },
-  { title: "CAT 2026 Notification Expected in July", date: "March 18, 2026", category: "MBA", desc: "IIM Bangalore is expected to release the CAT 2026 notification by July. Registration will begin in August." },
-  { title: "CLAT 2026 Results Declared", date: "March 15, 2026", category: "Law", desc: "CLAT 2026 results have been announced. Counseling process will begin from April 1, 2026." },
-  { title: "Top Private Engineering Colleges Accepting Direct Admission", date: "March 12, 2026", category: "Admission", desc: "Several private colleges have opened management quota seats for B.Tech 2026-27 batch." },
-  { title: "New NEP Guidelines for Professional Courses", date: "March 10, 2026", category: "Policy", desc: "UGC releases new guidelines under NEP 2020 for 4-year undergraduate programs." },
+  { title: "VITEEE 2026 Application Deadline Extended", date: "March 22, 2026", category: "Engineering", desc: "VIT has extended the VITEEE 2026 application deadline. Students can apply until April 5, 2026." },
+  { title: "GATE 2026 Results Expected Soon", date: "March 18, 2026", category: "GATE", desc: "GATE 2026 results are expected to be announced shortly. M.Tech admissions counseling will follow." },
+  { title: "SRMJEEE 2026 Slot Booking Begins", date: "March 15, 2026", category: "Engineering", desc: "SRM has opened slot booking for SRMJEEE 2026. Candidates can choose preferred exam dates." },
+  { title: "Engineering Colleges Open Admission Inquiries for 2026-27", date: "March 12, 2026", category: "Admission", desc: "Several private engineering colleges have started accepting admission inquiries for the upcoming academic session." },
+  { title: "New NEP Guidelines for Engineering Programs", date: "March 10, 2026", category: "Policy", desc: "UGC releases new guidelines under NEP 2020 for 4-year B.Tech programs." },
 ];
 
 const categoryColors: Record<string, string> = {
