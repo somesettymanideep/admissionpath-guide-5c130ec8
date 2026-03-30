@@ -97,8 +97,8 @@ const Index = () => (
           <h2 className="mb-4 text-3xl font-extrabold text-foreground lg:text-4xl">
             Everything You Need for Your <span className="text-gradient">Education Journey</span>
           </h2>
-          <p className="text-muted-foreground">
-            From finding the right college to securing admission — we've got you covered at every step.
+            <p className="text-muted-foreground">
+            From exploring colleges to understanding the admission process — we're here to help at every step.
           </p>
         </div>
         <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">

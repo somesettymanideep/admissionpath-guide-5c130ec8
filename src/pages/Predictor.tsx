@@ -103,7 +103,7 @@ const Predictor = () => {
                 ))}
               </div>
               <p className="mt-4 text-center text-xs text-muted-foreground">
-                * Predictions are based on past trends and are indicative only. Actual results may vary.
+                * These suggestions are based on past trends and are for informational purposes only. Actual admission outcomes depend on multiple factors and may vary. Please verify with respective colleges.
               </p>
             </div>
           )}

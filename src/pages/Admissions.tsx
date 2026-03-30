@@ -110,8 +110,8 @@ const Admissions = () => (
     <section id="inquiry-form" className="py-16">
       <div className="container">
         <div className="mx-auto max-w-2xl">
-          <h2 className="mb-2 text-center text-3xl font-extrabold text-foreground">Start Your Admission Process</h2>
-          <p className="mb-8 text-center text-muted-foreground">Fill in your details and our counselor will reach out within 24 hours.</p>
+          <h2 className="mb-2 text-center text-3xl font-extrabold text-foreground">Request Admission Counseling</h2>
+          <p className="mb-8 text-center text-muted-foreground">Fill in your details and our counselor will get in touch with you.</p>
           <LeadForm />
         </div>
       </div>

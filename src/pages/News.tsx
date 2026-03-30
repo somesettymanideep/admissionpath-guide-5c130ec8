@@ -12,9 +12,8 @@ const news = [
 
 const categoryColors: Record<string, string> = {
   JEE: "bg-primary text-primary-foreground",
-  NEET: "bg-secondary text-secondary-foreground",
-  MBA: "bg-primary text-primary-foreground",
-  Law: "bg-secondary text-secondary-foreground",
+  Engineering: "bg-secondary text-secondary-foreground",
+  GATE: "bg-primary text-primary-foreground",
   Admission: "bg-accent text-accent-foreground",
   Policy: "bg-muted text-muted-foreground",
 };

@@ -27,9 +27,9 @@ const Colleges = () => {
         {/* Header */}
         <div className="mb-8">
           <h1 className="mb-2 text-3xl font-extrabold text-foreground lg:text-4xl">
-            Explore Top Colleges in India
+            Explore Engineering Colleges in India
           </h1>
-          <p className="text-muted-foreground">Browse and compare colleges by location, fees, rankings, and placements.</p>
+          <p className="text-muted-foreground">Browse and compare engineering colleges by location, fees, rankings, and placements.</p>
         </div>
 
         {/* Filters */}

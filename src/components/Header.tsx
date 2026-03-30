@@ -22,8 +22,8 @@ const Header = () => {
       {/* Marquee Disclaimer */}
       <div className="bg-primary text-primary-foreground overflow-hidden whitespace-nowrap text-xs py-1">
         <div className="animate-marquee inline-block">
-          <span className="px-8">⚠️ <strong>Disclaimer:</strong> AdmissionCareerGuide provides information and counseling services only. We do not guarantee admissions to any institution. All information is for guidance purposes. Please verify details with respective colleges.</span>
-          <span className="px-8">⚠️ <strong>Disclaimer:</strong> AdmissionCareerGuide provides information and counseling services only. We do not guarantee admissions to any institution. All information is for guidance purposes. Please verify details with respective colleges.</span>
+           <span className="px-8">⚠️ <strong>Disclaimer:</strong> AdmissionCareerGuide is an independent counseling service. We do not guarantee admissions to any institution. All information is for guidance purposes only. Admission decisions are made solely by respective institutions. Please verify all details directly with colleges before making any decisions.</span>
+          <span className="px-8">⚠️ <strong>Disclaimer:</strong> AdmissionCareerGuide is an independent counseling service. We do not guarantee admissions to any institution. All information is for guidance purposes only. Admission decisions are made solely by respective institutions. Please verify all details directly with colleges before making any decisions.</span>
         </div>
       </div>
     <header className="border-b border-border bg-card/95 backdrop-blur supports-[backdrop-filter]:bg-card/80">

@@ -31,9 +31,9 @@ const Footer = () => (
           <h4 className="mb-3 font-semibold">Exams</h4>
           <ul className="space-y-2 text-sm opacity-70">
             <li>JEE Main & Advanced</li>
-            <li>NEET UG</li>
-            <li>CAT / MAT</li>
-            <li>CLAT</li>
+            <li>VITEEE</li>
+            <li>SRMJEEE</li>
+            <li>GATE</li>
           </ul>
         </div>
 
