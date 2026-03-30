@@ -32,7 +32,7 @@ export const colleges: College[] = [
     rating: 4.3,
     placements: "₹8.5 LPA avg | ₹44 LPA highest",
     cutoff: "VITEEE 65+ percentile",
-    image: "https://images.unsplash.com/photo-1562774053-701939374585?w=400&h=250&fit=crop",
+    image: vitVelloreImg,
     overview: "VIT Vellore is a premier private university known for its excellent engineering programs and consistent placement records.",
   },
   {
