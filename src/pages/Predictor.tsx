@@ -86,7 +86,7 @@ const Predictor = () => {
           {predictions && (
             <div>
               <h2 className="mb-4 text-xl font-bold text-foreground">
-                🎯 Predicted Colleges for {exam} Rank {rank}
+                📋 Suggested Colleges for {exam} Rank {rank}
               </h2>
               <div className="space-y-3">
                 {predictions.map((p) => (
