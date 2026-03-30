@@ -18,7 +18,15 @@ const Header = () => {
   const location = useLocation();
 
   return (
-    <header className="sticky top-0 z-50 border-b border-border bg-card/95 backdrop-blur supports-[backdrop-filter]:bg-card/80">
+    <div className="sticky top-0 z-50">
+      {/* Marquee Disclaimer */}
+      <div className="bg-primary text-primary-foreground overflow-hidden whitespace-nowrap text-xs py-1">
+        <div className="animate-marquee inline-block">
+          <span className="px-8">⚠️ <strong>Disclaimer:</strong> AdmissionCareerGuide provides information and counseling services only. We do not guarantee admissions to any institution. All information is for guidance purposes. Please verify details with respective colleges.</span>
+          <span className="px-8">⚠️ <strong>Disclaimer:</strong> AdmissionCareerGuide provides information and counseling services only. We do not guarantee admissions to any institution. All information is for guidance purposes. Please verify details with respective colleges.</span>
+        </div>
+      </div>
+    <header className="border-b border-border bg-card/95 backdrop-blur supports-[backdrop-filter]:bg-card/80">
       <div className="container flex h-16 items-center justify-between">
         <Link to="/" className="flex items-center gap-2">
           <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-primary">

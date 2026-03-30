@@ -48,10 +48,7 @@ const Footer = () => (
       </div>
 
       <div className="mt-8 border-t border-primary-foreground/20 pt-6">
-        <p className="text-center text-xs opacity-50">
-          <strong>Disclaimer:</strong> AdmissionCareerGuide provides information and counseling services only. We do not guarantee admissions to any institution. All information is for guidance purposes. Please verify details with respective colleges.
-        </p>
-        <p className="mt-2 text-center text-xs opacity-40">
+        <p className="text-center text-xs opacity-40">
           © {new Date().getFullYear()} AdmissionCareerGuide. All rights reserved.
         </p>
       </div>
