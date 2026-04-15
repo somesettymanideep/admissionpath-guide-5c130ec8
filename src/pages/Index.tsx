@@ -99,6 +99,17 @@ const Index = () => (
             <p className="text-muted-foreground">Fill in your details and our expert counselors will help you find the best-fit college for your career goals.</p>
           </div>
           <LeadForm />
+          <p className="text-xs text-muted-foreground text-center mt-4">
+            I consent to receive SMS, email, and WhatsApp messages and agree to the{" "}
+            <Link to="/terms-and-conditions" className="text-primary hover:underline">
+              terms and conditions
+            </Link>{" "}
+            and{" "}
+            <Link to="/privacy-policy" className="text-primary hover:underline">
+              privacy policy
+            </Link>
+            .
+          </p>
         </div>
       </div>
     </section>

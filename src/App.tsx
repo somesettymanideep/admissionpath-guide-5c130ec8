@@ -13,6 +13,8 @@ import Courses from "./pages/Courses";
 import News from "./pages/News";
 import Community from "./pages/Community";
 import NotFound from "./pages/NotFound";
+import PrivacyPolicy from "./pages/PrivacyPolicy";
+import TermsAndConditions from "./pages/TermsAndConditions";
 
 const queryClient = new QueryClient();
 
@@ -33,6 +35,8 @@ const App = () => (
             <Route path="/courses" element={<Courses />} />
             <Route path="/news" element={<News />} />
             <Route path="/community" element={<Community />} />
+            <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+            <Route path="/terms-and-conditions" element={<TermsAndConditions />} />
           </Route>
           <Route path="*" element={<NotFound />} />
         </Routes>
