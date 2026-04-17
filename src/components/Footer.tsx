@@ -42,7 +42,7 @@ const Footer = () => (
         <div>
           <h4 className="mb-3 font-semibold">Contact Us</h4>
           <ul className="space-y-2 text-sm opacity-70">
-            <li className="flex items-center gap-2"><Phone className="h-4 w-4" /> +91 98765 43210</li>
+            <li className="flex items-center gap-2"><Phone className="h-4 w-4" /> +91 90100 22238</li>
             <li className="flex items-center gap-2"><Mail className="h-4 w-4" /> info@admissioncareerguide.com</li>
             <li className="flex items-center gap-2"><MapPin className="h-4 w-4" /> New Delhi, India</li>
           </ul>
@@ -52,6 +52,9 @@ const Footer = () => (
       <div className="mt-8 border-t border-primary-foreground/20 pt-6">
         <p className="text-center text-xs opacity-40">
           © {new Date().getFullYear()} AdmissionCareerGuide. All rights reserved. We are a guidance-only platform and do not process admissions.
+        </p>
+        <p className="text-center text-xs opacity-40 mt-2">
+          Powered by SR Global
         </p>
       </div>
     </div>
