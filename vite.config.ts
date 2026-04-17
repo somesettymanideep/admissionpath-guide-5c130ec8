@@ -4,7 +4,7 @@ import path from "path";
 import { componentTagger } from "lovable-tagger";
 
 export default defineConfig(({ mode }) => ({
-  base: "/admissionpath-guide/", // ✅ FIXED
+  base: "/", // Changed from "/admissionpath-guide/" for custom domain deployment
   server: {
     host: "::",
     port: 8080,
