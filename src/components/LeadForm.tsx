@@ -5,7 +5,7 @@ import { Label } from "@/components/ui/label";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { toast } from "sonner";
 import { z } from "zod";
-import { supabase } from "@/integrations/supabase/client";
+import { addLead } from "@/lib/leadsStore";
 
 const courses = [
   "B.Tech / Engineering",
@@ -32,20 +32,22 @@ const LeadForm = ({ compact = false }: { compact?: boolean }) => {
       return;
     }
     setSubmitting(true);
-    const { error } = await supabase.from("leads").insert({
-      name: parsed.data.name,
-      phone: parsed.data.phone,
-      email: parsed.data.email || null,
-      course: parsed.data.course,
-      source: "website",
-    });
-    setSubmitting(false);
-    if (error) {
+    try {
+      addLead({
+        name: parsed.data.name,
+        phone: parsed.data.phone,
+        email: parsed.data.email || null,
+        course: parsed.data.course,
+        source: "website",
+        notes: null,
+      });
+      toast.success("Thank you! Our counselor will contact you shortly with guidance.");
+      setFormData({ name: "", phone: "", email: "", course: "" });
+    } catch {
       toast.error("Could not submit. Please try again.");
-      return;
+    } finally {
+      setSubmitting(false);
     }
-    toast.success("Thank you! Our counselor will contact you shortly with guidance.");
-    setFormData({ name: "", phone: "", email: "", course: "" });
   };
 
   return (

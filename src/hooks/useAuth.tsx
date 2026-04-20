@@ -1,59 +1,43 @@
 import { createContext, useContext, useEffect, useState, ReactNode } from "react";
-import { Session, User } from "@supabase/supabase-js";
-import { supabase } from "@/integrations/supabase/client";
 
 interface AuthContextValue {
-  user: User | null;
-  session: Session | null;
   isAdmin: boolean;
   loading: boolean;
-  signOut: () => Promise<void>;
+  signIn: (username: string, password: string) => boolean;
+  signOut: () => void;
 }
 
 const AuthContext = createContext<AuthContextValue | undefined>(undefined);
 
+const KEY = "admin_session_v1";
+const ADMIN_USER = "admin";
+const ADMIN_PASS = "123456";
+
 export const AuthProvider = ({ children }: { children: ReactNode }) => {
-  const [user, setUser] = useState<User | null>(null);
-  const [session, setSession] = useState<Session | null>(null);
   const [isAdmin, setIsAdmin] = useState(false);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    const checkRole = async (uid: string | undefined) => {
-      if (!uid) {
-        setIsAdmin(false);
-        return;
-      }
-      const { data } = await supabase
-        .from("user_roles")
-        .select("role")
-        .eq("user_id", uid)
-        .eq("role", "admin")
-        .maybeSingle();
-      setIsAdmin(!!data);
-    };
-
-    const { data: { subscription } } = supabase.auth.onAuthStateChange((_event, sess) => {
-      setSession(sess);
-      setUser(sess?.user ?? null);
-      setTimeout(() => checkRole(sess?.user?.id), 0);
-    });
-
-    supabase.auth.getSession().then(({ data: { session: sess } }) => {
-      setSession(sess);
-      setUser(sess?.user ?? null);
-      checkRole(sess?.user?.id).finally(() => setLoading(false));
-    });
-
-    return () => subscription.unsubscribe();
+    setIsAdmin(localStorage.getItem(KEY) === "1");
+    setLoading(false);
   }, []);
 
-  const signOut = async () => {
-    await supabase.auth.signOut();
+  const signIn = (username: string, password: string) => {
+    if (username === ADMIN_USER && password === ADMIN_PASS) {
+      localStorage.setItem(KEY, "1");
+      setIsAdmin(true);
+      return true;
+    }
+    return false;
+  };
+
+  const signOut = () => {
+    localStorage.removeItem(KEY);
+    setIsAdmin(false);
   };
 
   return (
-    <AuthContext.Provider value={{ user, session, isAdmin, loading, signOut }}>
+    <AuthContext.Provider value={{ isAdmin, loading, signIn, signOut }}>
       {children}
     </AuthContext.Provider>
   );

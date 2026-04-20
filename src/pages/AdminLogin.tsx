@@ -5,31 +5,27 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Card } from "@/components/ui/card";
 import { toast } from "sonner";
-import { supabase } from "@/integrations/supabase/client";
 import { useAuth } from "@/hooks/useAuth";
 import { Lock } from "lucide-react";
 
 const AdminLogin = () => {
   const navigate = useNavigate();
-  const { user, isAdmin, loading } = useAuth();
-  const [email, setEmail] = useState("");
+  const { isAdmin, loading, signIn } = useAuth();
+  const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
-  const [submitting, setSubmitting] = useState(false);
 
   useEffect(() => {
-    if (!loading && user && isAdmin) navigate("/admin", { replace: true });
-  }, [user, isAdmin, loading, navigate]);
+    if (!loading && isAdmin) navigate("/admin", { replace: true });
+  }, [isAdmin, loading, navigate]);
 
-  const handleSubmit = async (e: React.FormEvent) => {
+  const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    setSubmitting(true);
-    const { error } = await supabase.auth.signInWithPassword({ email, password });
-    setSubmitting(false);
-    if (error) {
-      toast.error(error.message);
-      return;
+    if (signIn(username, password)) {
+      toast.success("Logged in");
+      navigate("/admin", { replace: true });
+    } else {
+      toast.error("Invalid username or password");
     }
-    toast.success("Logged in. Verifying admin access...");
   };
 
   return (
@@ -44,16 +40,14 @@ const AdminLogin = () => {
         </div>
         <form onSubmit={handleSubmit} className="space-y-4">
           <div>
-            <Label htmlFor="email">Email</Label>
-            <Input id="email" type="email" required value={email} onChange={(e) => setEmail(e.target.value)} placeholder="admin@example.com" />
+            <Label htmlFor="username">Username</Label>
+            <Input id="username" required value={username} onChange={(e) => setUsername(e.target.value)} placeholder="admin" />
           </div>
           <div>
             <Label htmlFor="password">Password</Label>
             <Input id="password" type="password" required value={password} onChange={(e) => setPassword(e.target.value)} />
           </div>
-          <Button type="submit" className="w-full" disabled={submitting}>
-            {submitting ? "Signing in..." : "Sign In"}
-          </Button>
+          <Button type="submit" className="w-full">Sign In</Button>
         </form>
       </Card>
     </div>
