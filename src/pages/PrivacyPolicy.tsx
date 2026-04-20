@@ -117,7 +117,7 @@ const PrivacyPolicy = () => {
             If you have any questions about this Privacy Policy, please contact us at:
           </p>
           <div className="text-muted-foreground">
-            <p>Email: privacy@admissioncareerguide.com</p>
+            <p>Email: <a href="mailto:admissionscareerguide@gmail.com" className="hover:underline">admissionscareerguide@gmail.com</a></p>
             <p>Phone: +91 XXXXX XXXXX</p>
           </div>
         </section>
