@@ -4,6 +4,8 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { toast } from "sonner";
+import { z } from "zod";
+import { supabase } from "@/integrations/supabase/client";
 
 const courses = [
   "B.Tech / Engineering",
@@ -11,18 +13,35 @@ const courses = [
   "Other",
 ];
 
-const LeadForm = ({ compact = false }: { compact?: boolean }) => {
-  const [formData, setFormData] = useState({
-    name: "",
-    phone: "",
-    email: "",
-    course: "",
-  });
+const leadSchema = z.object({
+  name: z.string().trim().min(1, "Name required").max(200),
+  phone: z.string().trim().min(5, "Valid phone required").max(30),
+  email: z.string().trim().email("Invalid email").max(255).optional().or(z.literal("")),
+  course: z.string().trim().min(1, "Select a course").max(200),
+});
 
-  const handleSubmit = (e: React.FormEvent) => {
+const LeadForm = ({ compact = false }: { compact?: boolean }) => {
+  const [formData, setFormData] = useState({ name: "", phone: "", email: "", course: "" });
+  const [submitting, setSubmitting] = useState(false);
+
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    if (!formData.name || !formData.phone || !formData.course) {
-      toast.error("Please fill all required fields");
+    const parsed = leadSchema.safeParse(formData);
+    if (!parsed.success) {
+      toast.error(parsed.error.errors[0].message);
+      return;
+    }
+    setSubmitting(true);
+    const { error } = await supabase.from("leads").insert({
+      name: parsed.data.name,
+      phone: parsed.data.phone,
+      email: parsed.data.email || null,
+      course: parsed.data.course,
+      source: "website",
+    });
+    setSubmitting(false);
+    if (error) {
+      toast.error("Could not submit. Please try again.");
       return;
     }
     toast.success("Thank you! Our counselor will contact you shortly with guidance.");
@@ -57,7 +76,9 @@ const LeadForm = ({ compact = false }: { compact?: boolean }) => {
           </Select>
         </div>
       </div>
-      <Button type="submit" className="w-full">Get Guidance</Button>
+      <Button type="submit" className="w-full" disabled={submitting}>
+        {submitting ? "Submitting..." : "Get Guidance"}
+      </Button>
     </form>
   );
 };
