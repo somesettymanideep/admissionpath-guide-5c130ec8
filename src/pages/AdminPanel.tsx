@@ -6,58 +6,33 @@ import { Card } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
 import { toast } from "sonner";
-import { supabase } from "@/integrations/supabase/client";
 import { useAuth } from "@/hooks/useAuth";
 import { Download, Upload, Trash2, LogOut, RefreshCw, Search } from "lucide-react";
 import { format } from "date-fns";
-
-interface Lead {
-  id: string;
-  name: string;
-  phone: string;
-  email: string | null;
-  course: string | null;
-  source: string | null;
-  notes: string | null;
-  created_at: string;
-}
+import { Lead, getLeads, addLeadsBulk, deleteLead } from "@/lib/leadsStore";
 
 const AdminPanel = () => {
   const navigate = useNavigate();
-  const { user, isAdmin, loading, signOut } = useAuth();
+  const { isAdmin, loading, signOut } = useAuth();
   const [leads, setLeads] = useState<Lead[]>([]);
-  const [fetching, setFetching] = useState(false);
   const [search, setSearch] = useState("");
   const fileRef = useRef<HTMLInputElement>(null);
 
   useEffect(() => {
-    if (!loading && (!user || !isAdmin)) navigate("/admin/login", { replace: true });
-  }, [user, isAdmin, loading, navigate]);
+    if (!loading && !isAdmin) navigate("/admin/login", { replace: true });
+  }, [isAdmin, loading, navigate]);
 
-  const fetchLeads = async () => {
-    setFetching(true);
-    const { data, error } = await supabase.from("leads").select("*").order("created_at", { ascending: false });
-    setFetching(false);
-    if (error) {
-      toast.error("Failed to fetch leads");
-      return;
-    }
-    setLeads(data as Lead[]);
-  };
+  const refresh = () => setLeads(getLeads());
 
   useEffect(() => {
-    if (user && isAdmin) fetchLeads();
-  }, [user, isAdmin]);
+    if (isAdmin) refresh();
+  }, [isAdmin]);
 
-  const handleDelete = async (id: string) => {
+  const handleDelete = (id: string) => {
     if (!confirm("Delete this lead?")) return;
-    const { error } = await supabase.from("leads").delete().eq("id", id);
-    if (error) {
-      toast.error("Failed to delete");
-      return;
-    }
+    deleteLead(id);
     toast.success("Lead deleted");
-    fetchLeads();
+    refresh();
   };
 
   const handleExport = () => {
@@ -87,7 +62,7 @@ const AdminPanel = () => {
     Papa.parse<Record<string, string>>(file, {
       header: true,
       skipEmptyLines: true,
-      complete: async (result) => {
+      complete: (result) => {
         const valid = result.data
           .map((r) => ({
             name: (r.name || "").trim().slice(0, 200),
@@ -105,13 +80,9 @@ const AdminPanel = () => {
           return;
         }
 
-        const { error } = await supabase.from("leads").insert(valid);
-        if (error) {
-          toast.error(`Import failed: ${error.message}`);
-        } else {
-          toast.success(`Imported ${valid.length} leads`);
-          fetchLeads();
-        }
+        const count = addLeadsBulk(valid);
+        toast.success(`Imported ${count} leads`);
+        refresh();
         if (fileRef.current) fileRef.current.value = "";
       },
       error: () => {
@@ -121,8 +92,8 @@ const AdminPanel = () => {
     });
   };
 
-  const handleLogout = async () => {
-    await signOut();
+  const handleLogout = () => {
+    signOut();
     navigate("/admin/login");
   };
 
@@ -139,11 +110,11 @@ const AdminPanel = () => {
         <div className="flex flex-wrap items-center justify-between gap-3">
           <div>
             <h1 className="text-3xl font-bold">Admin Panel</h1>
-            <p className="text-sm text-muted-foreground">Manage guidance form leads</p>
+            <p className="text-sm text-muted-foreground">Manage guidance form leads (stored locally in this browser)</p>
           </div>
           <div className="flex gap-2">
-            <Button variant="outline" size="sm" onClick={fetchLeads} disabled={fetching}>
-              <RefreshCw className={`mr-2 h-4 w-4 ${fetching ? "animate-spin" : ""}`} /> Refresh
+            <Button variant="outline" size="sm" onClick={refresh}>
+              <RefreshCw className="mr-2 h-4 w-4" /> Refresh
             </Button>
             <Button variant="outline" size="sm" onClick={handleLogout}>
               <LogOut className="mr-2 h-4 w-4" /> Logout
