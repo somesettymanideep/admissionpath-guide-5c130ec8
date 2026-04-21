@@ -2,6 +2,7 @@ import vitVelloreImg from "@/assets/vit-vellore.webp";
 import srmChennaiImg from "@/assets/srm-chennai.jpg";
 import amritaImg from "@/assets/amrita-university.jpg";
 import amritaCoimbatoreImg from "@/assets/amrita-coimbatore.jpg";
+import marwadiImg from "@/assets/marwadi-university.jpg";
 
 export interface College {
   id: string;
@@ -130,7 +131,7 @@ export const colleges: College[] = [
     rating: 4.0,
     placements: "₹5.5 LPA avg | ₹25 LPA highest",
     cutoff: "JEE Main / GUJCET",
-    image: "https://images.unsplash.com/photo-1607237138185-eedd9c632b0b?w=400&h=250&fit=crop",
+    image: marwadiImg,
     overview: "Marwadi University is a NAAC A+ accredited private university in Rajkot, Gujarat, known for its modern campus, industry-oriented engineering programs, and strong placement support.",
   },
   {
