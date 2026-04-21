@@ -97,7 +97,7 @@ const Guidance = () => (
               <MessageCircle className="h-8 w-8 text-secondary" />
               <div>
                 <p className="font-semibold text-foreground">Quick Contact via WhatsApp</p>
-                <a href="https://wa.me/919876543210" target="_blank" rel="noopener noreferrer" className="text-sm text-primary hover:underline">
+                <a href="https://wa.me/917013978887" target="_blank" rel="noopener noreferrer" className="text-sm text-primary hover:underline">
                   Chat with us on WhatsApp →
                 </a>
               </div>
