@@ -42,7 +42,7 @@ const Footer = () => (
         <div>
           <h4 className="mb-3 font-semibold">Contact Us</h4>
           <ul className="space-y-2 text-sm opacity-70">
-            <li className="flex items-center gap-2"><Phone className="h-4 w-4" /> +91 90100 22238</li>
+            <li className="flex items-center gap-2"><Phone className="h-4 w-4" /> <a href="tel:+917013978887" className="hover:underline">+91 70139 78887</a></li>
             <li className="flex items-center gap-2"><Mail className="h-4 w-4" /> <a href="mailto:admissionscareerguide@gmail.com" className="hover:underline">admissionscareerguide@gmail.com</a></li>
             <li className="flex items-center gap-2"><MapPin className="h-4 w-4" /> New Delhi, India</li>
           </ul>
