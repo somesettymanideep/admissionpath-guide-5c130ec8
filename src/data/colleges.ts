@@ -2,6 +2,7 @@ import vitVelloreImg from "@/assets/vit-vellore.webp";
 import srmChennaiImg from "@/assets/srm-chennai.jpg";
 import amritaImg from "@/assets/amrita-university.jpg";
 import amritaCoimbatoreImg from "@/assets/amrita-coimbatore.jpg";
+import marwadiImg from "@/assets/marwadi-university.jpg";
 
 export interface College {
   id: string;
