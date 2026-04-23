@@ -1,4 +1,5 @@
 import { useState } from "react";
+import emailjs from "@emailjs/browser";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
@@ -6,6 +7,10 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@
 import { toast } from "sonner";
 import { z } from "zod";
 import { addLead } from "@/lib/leadsStore";
+
+const EMAILJS_SERVICE_ID = "service_uszr8os";
+const EMAILJS_TEMPLATE_ID = "template_dlcnwbo";
+const EMAILJS_PUBLIC_KEY = "Z5prbB_SqrMPjy0oS";
 
 const courses = [
   "B.Tech / Engineering",
@@ -41,6 +46,24 @@ const LeadForm = ({ compact = false }: { compact?: boolean }) => {
         source: "website",
         notes: null,
       });
+
+      try {
+        await emailjs.send(
+          EMAILJS_SERVICE_ID,
+          EMAILJS_TEMPLATE_ID,
+          {
+            name: parsed.data.name,
+            phone: parsed.data.phone,
+            email: parsed.data.email || "Not provided",
+            course: parsed.data.course,
+            time: new Date().toLocaleString(),
+          },
+          { publicKey: EMAILJS_PUBLIC_KEY },
+        );
+      } catch (err) {
+        console.error("EmailJS send failed:", err);
+      }
+
       toast.success("Thank you! Our counselor will contact you shortly with guidance.");
       setFormData({ name: "", phone: "", email: "", course: "" });
     } catch {
